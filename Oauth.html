@@ -8,8 +8,8 @@
   <button onclick="authorize()">Autorizar</button>
 
   <script>
-    const SEU_CLIENT_ID = 'SEU_CLIENT_ID'; // Substitua pelo seu Client ID do Mercado Pago
-    const SEU_CLIENT_SECRET = 'SEU_CLIENT_SECRET'; // Substitua pelo seu Client Secret do Mercado Pago
+    const SEU_CLIENT_ID = '4592617635040679'; // Substitua pelo seu Client ID do Mercado Pago
+    const SEU_CLIENT_SECRET = 'CFJ7vOJjSZBQnN8MsSHRptLeIgAm6Ri7'; // Substitua pelo seu Client Secret do Mercado Pago
     const SUA_URL_DE_REDIRECT = 'https://api.redeminers.com/oauth'; // Substitua pela sua URL de redirecionamento registrada no Mercado Pago
 
     async function authorize() {
@@ -30,7 +30,7 @@
 
         const data = await response.json();
         const accessToken = data.access_token;
-        console.log('Token de acesso obtido:', accessToken);
+        alert('Token de acesso obtido:', accessToken);
 
         // A partir deste ponto, você pode usar o token de acesso para fazer solicitações em nome do cliente autenticado
         // Exemplo: use o token de acesso para fazer solicitações à API do Mercado Pago em nome do cliente
